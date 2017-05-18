@@ -10,6 +10,8 @@ import java.util.List;
 
 public class ActivityRepositoryStub implements ActivityRepository {
 
+
+
     @Override
     public List<Activity> findAllActivities(){
 
@@ -26,6 +28,9 @@ public class ActivityRepositoryStub implements ActivityRepository {
 
     @Override
     public Activity findActivity(int activityId) {
+
+       /* Activity fakeActivity = new Activity();
+        return fakeActivity;*/
 
         Session session = HibernateUtilities.getSessionFactory().openSession();
         session.beginTransaction();
